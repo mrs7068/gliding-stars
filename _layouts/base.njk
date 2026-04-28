@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ title }} | Gliding Stars</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="alternate icon" href="/assets/images/favicon.svg">
+  <link rel="apple-touch-icon" href="/assets/images/favicon.svg">
+</head>
+<body class="{% if page.url == '/' %}home{% endif %}">
+
+<header class="site-header">
+  {% include "nav.njk" %}
+</header>
+
+<main>
+  {{ content | safe }}
+</main>
+
+{% include "footer.njk" %}
+
+<script>
+  const toggle = document.querySelector(".nav-toggle");
+  const links = document.querySelector(".nav-links");
+
+  if (toggle && links) {
+    toggle.addEventListener("click", () => {
+      links.classList.toggle("active");
+    });
+  }
+
+  const body = document.body;
+  const hero = document.querySelector(".hero");
+
+  if (hero) {
+    const updateNavState = () => {
+      const heroHeight = hero.offsetHeight;
+      const isMobile = window.innerWidth <= 767;
+
+      const logoTrigger = isMobile
+        ? heroHeight * 0.65
+        : heroHeight * 0.68;
+
+      const bgTrigger = heroHeight - 80;
+
+      if (window.scrollY > logoTrigger) {
+        body.classList.add("scrolled");
+      } else {
+        body.classList.remove("scrolled");
+      }
+
+      if (window.scrollY > bgTrigger) {
+        body.classList.add("nav-solid");
+      } else {
+        body.classList.remove("nav-solid");
+      }
+    };
+
+    updateNavState();
+    window.addEventListener("scroll", updateNavState);
+    window.addEventListener("resize", updateNavState);
+  }
+</script>
+
+</body>
+</html>
