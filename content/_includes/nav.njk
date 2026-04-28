@@ -1,13 +1,13 @@
 <nav class="nav">
 
-  <a href="/" class="logo nav-logo">
-    <img src="/assets/images/logo-horizontal.png" alt="Gliding Stars logo">
+  <a href="{{ '/' | url }}" class="logo nav-logo">
+    <img src="{{ '/assets/images/logo-horizontal.png' | url }}" alt="Gliding Stars logo">
   </a>
 
   <ul class="nav-links">
     {% for item in navigation %}
       <li>
-        <a href="{{ item.url }}" class="{% if page.url == item.url %}active{% endif %}">
+        <a href="{{ item.url | url }}" class="{% if page.url == item.url %}active{% endif %}">
           {{ item.name }}
         </a>
       </li>

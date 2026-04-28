@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home | Gliding Stars</title>
+  <title>Page Not Found | Gliding Stars</title>
 
   <link rel="stylesheet" href="/gliding-stars/css/style.css">
   <link rel="icon" href="/gliding-stars/assets/images/favicon.svg" type="image/svg+xml">
@@ -12,19 +12,19 @@
 
   <meta name="description" content="Gliding Stars of Erie is an adaptive ice skating program helping individuals with disabilities grow through skating.">
 
-  <meta property="og:title" content="Home | Gliding Stars">
+  <meta property="og:title" content="Page Not Found | Gliding Stars">
   <meta property="og:description" content="Adaptive ice skating program in Erie, PA.">
   <meta property="og:image" content="/gliding-stars/assets/images/logo.png">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="/gliding-stars/">
+  <meta property="og:url" content="/gliding-stars/404.html">
 
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Home | Gliding Stars">
+  <meta name="twitter:title" content="Page Not Found | Gliding Stars">
   <meta name="twitter:description" content="Adaptive ice skating program in Erie, PA.">
   <meta name="twitter:image" content="/gliding-stars/assets/images/logo.png">
 </head>
 
-<body class="home">
+<body class="">
 
 <header class="site-header">
   <nav class="nav">
@@ -36,7 +36,7 @@
   <ul class="nav-links">
     
       <li>
-        <a href="/gliding-stars/" class="active">
+        <a href="/gliding-stars/" class="">
           Home
         </a>
       </li>
@@ -94,64 +94,20 @@
 </header>
 
 <main>
-  <!-- HERO -->
-<section class="hero">
-  <video autoplay muted loop playsinline class="hero-video">
-    <source src="/gliding-stars/assets/video/hero.mp4" type="video/mp4">
-  </video>
-  <div class="hero-overlay">
-    <img src="/gliding-stars/assets/images/logo.png" alt="Gliding Stars logo" class="hero-logo">
-    <h1>I CAN DO IT! I CAN SKATE!</h1>
-    <p class="hero-sub">
-      Building confidence, independence, and community on the ice
-    </p>
-  </div>
-</section>
-<!-- MISSION -->
-<section class="section mission">
-  <p>Gliding Stars of Erie is an adaptive ice skating program that helps individuals with disabilities grow physically, socially, and emotionally through the sport of skating.</p>
-</section>
-<!-- QUICK PATHS -->
-<section class="section quick-links">
-  <div class="card">
-    <h3>About the Program</h3>
-    <p>Learn how Gliding Stars works and what makes it meaningful for skaters and families.</p>
-    <a href="/gliding-stars/about-us/" class="button">Learn More</a>
-  </div>
-  <div class="card">
-    <h3>Season & Schedule</h3>
-    <p>See how the season is structured and find current schedules and updates.</p>
-    <a href="/gliding-stars/our-program/" class="button">View Schedule</a>
-  </div>
-  <div class="card">
-    <h3>Get Involved</h3>
-    <p>Join as a skater, volunteer, or supporter and become part of the community.</p>
-    <a href="/gliding-stars/get-involved/" class="button">Contact Us</a>
-  </div>
-</section>
-<!-- VISUAL STRIP -->
-<section class="section gallery-preview">
-  <img src="/gliding-stars/assets/images/sample1.jpg" alt="Gliding Stars skaters">
-  <img src="/gliding-stars/assets/images/sample2.jpg" alt="Gliding Stars program">
-  <img src="/gliding-stars/assets/images/sample3.jpg" alt="Gliding Stars performance">
-</section>
-<!-- SHOW PREVIEW -->
-<section class="section show-preview">
-  <h2>The Ice Show</h2>
-  <p>
-    Each season builds toward a final performance where every skater has the opportunity to shine.
-    It’s a moment of confidence, pride, and celebration for skaters and families alike.
-  </p>
-</section>
-<!-- COMMUNITY -->
-<section class="section community">
-  <h2>A Community on and off the Ice</h2>
-  <p>
-    Gliding Stars is more than a skating program—it’s a place where friendships form,
-    families connect, and everyone feels part of something bigger.
-  </p>
+  
+<section class="section">
+  <h1>Page Not Found</h1>
+  <p>This page doesn’t exist.</p>
+  <p><a href="/gliding-stars/" class="button">Go Home</a></p>
 </section>
 
+<script>
+  const redirect = sessionStorage.getItem("redirect");
+  if (redirect) {
+    sessionStorage.removeItem("redirect");
+    window.location.href = redirect;
+  }
+</script>
 </main>
 
 <footer class="site-footer">

@@ -5,14 +5,12 @@
     <div class="footer-inner">
       <div class="footer-grid">
 
-        <!-- COLUMN 1: LOGO -->
         <div class="footer-col footer-logo">
-          <a href="/" class="footer-logo">
-            <img src="/assets/images/logo.png" alt="Gliding Stars logo">
+          <a href="{{ '/' | url }}">
+            <img src="{{ '/assets/images/logo.png' | url }}" alt="Gliding Stars logo">
           </a>
         </div>
 
-        <!-- COLUMN 2: MAILING ADDRESS -->
         <div class="footer-col">
           <p class="footer-heading">Mailing Address</p>
           <p>Gliding Stars of Erie, Inc.<br>
@@ -20,7 +18,6 @@
           Erie, PA 16514</p>
         </div>
 
-        <!-- COLUMN 3: CONTACT + SOCIALS -->
         <div class="footer-col">
           <p class="footer-heading">Contact</p>
 
@@ -54,16 +51,15 @@
           </div>
         </div>
 
-        <!-- COLUMN 4: ICE LOCATION -->
         <div class="footer-col">
           <p class="footer-heading">Ice Location</p>
-            <p class="footer-link-block">
-              <a href="https://maps.app.goo.gl/v3A6BqgMfSiyFL2x7" target="_blank" rel="noopener noreferrer">
-                Mercyhurst Ice Center<br>
-                501 E 38th St<br>
-                Erie, PA 16504
-              </a>
-            </p>
+          <p class="footer-link-block">
+            <a href="https://maps.app.goo.gl/v3A6BqgMfSiyFL2x7" target="_blank" rel="noopener noreferrer">
+              Mercyhurst Ice Center<br>
+              501 E 38th St<br>
+              Erie, PA 16504
+            </a>
+          </p>
         </div>
 
       </div>
@@ -81,7 +77,7 @@
 
       <nav class="footer-nav">
         {% for item in navigation %}
-          <a href="{{ item.url }}">{{ item.name }}</a>
+          <a href="{{ item.url | url }}">{{ item.name }}</a>
         {% endfor %}
       </nav>
 

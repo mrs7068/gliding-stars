@@ -14,11 +14,11 @@ feature_enabled: false
 <!-- HERO -->
 <section class="hero">
   <video autoplay muted loop playsinline class="hero-video">
-    <source src="{{ hero_video }}" type="video/mp4">
+    <source src="{{ hero_video | url }}" type="video/mp4">
   </video>
 
   <div class="hero-overlay">
-    <img src="{{ hero_logo }}" alt="Gliding Stars logo" class="hero-logo">
+    <img src="{{ hero_logo | url }}" alt="Gliding Stars logo" class="hero-logo">
     <h1>{{ hero_motto }}</h1>
     <p class="hero-sub">
       Building confidence, independence, and community on the ice
@@ -37,28 +37,28 @@ feature_enabled: false
   <div class="card">
     <h3>About the Program</h3>
     <p>Learn how Gliding Stars works and what makes it meaningful for skaters and families.</p>
-    <a href="/about/" class="button">Learn More</a>
+    <a href="{{ '/about-us/' | url }}" class="button">Learn More</a>
   </div>
 
   <div class="card">
     <h3>Season & Schedule</h3>
     <p>See how the season is structured and find current schedules and updates.</p>
-    <a href="/schedule/" class="button">View Schedule</a>
+    <a href="{{ '/our-program/' | url }}" class="button">View Schedule</a>
   </div>
 
   <div class="card">
     <h3>Get Involved</h3>
     <p>Join as a skater, volunteer, or supporter and become part of the community.</p>
-    <a href="/contact/" class="button">Contact Us</a>
+    <a href="{{ '/get-involved/' | url }}" class="button">Contact Us</a>
   </div>
 
 </section>
 
 <!-- VISUAL STRIP -->
 <section class="section gallery-preview">
-  <img src="/assets/images/sample1.jpg" alt="Gliding Stars skaters">
-  <img src="/assets/images/sample2.jpg" alt="Gliding Stars program">
-  <img src="/assets/images/sample3.jpg" alt="Gliding Stars performance">
+  <img src="{{ '/assets/images/sample1.jpg' | url }}" alt="Gliding Stars skaters">
+  <img src="{{ '/assets/images/sample2.jpg' | url }}" alt="Gliding Stars program">
+  <img src="{{ '/assets/images/sample3.jpg' | url }}" alt="Gliding Stars performance">
 </section>
 
 <!-- SHOW PREVIEW -->
@@ -79,7 +79,6 @@ feature_enabled: false
   </p>
 </section>
 
-<!-- OPTIONAL FEATURE -->
 {% if feature_enabled %}
 <section class="section feature">
   <h2>Summer Program</h2>

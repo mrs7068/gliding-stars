@@ -4,11 +4,12 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy("assets");
 
     return {
+        pathPrefix: "/gliding-stars/",
         dir: {
             input: "content",
-            includes: "../_includes",
-            layouts: "../_layouts",
-            output: "docs"
+            includes: "_includes",
+            layouts: "_layouts",
+            output: "_site"
         }
     };
 };

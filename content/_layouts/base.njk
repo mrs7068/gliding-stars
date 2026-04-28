@@ -4,11 +4,26 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ title }} | Gliding Stars</title>
-  <link rel="stylesheet" href="/css/style.css">
-  <link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml">
-  <link rel="alternate icon" href="/assets/images/favicon.svg">
-  <link rel="apple-touch-icon" href="/assets/images/favicon.svg">
+
+  <link rel="stylesheet" href="{{ '/css/style.css' | url }}">
+  <link rel="icon" href="{{ '/assets/images/favicon.svg' | url }}" type="image/svg+xml">
+  <link rel="alternate icon" href="{{ '/assets/images/favicon.svg' | url }}">
+  <link rel="apple-touch-icon" href="{{ '/assets/images/favicon.svg' | url }}">
+
+  <meta name="description" content="Gliding Stars of Erie is an adaptive ice skating program helping individuals with disabilities grow through skating.">
+
+  <meta property="og:title" content="{{ title }} | Gliding Stars">
+  <meta property="og:description" content="Adaptive ice skating program in Erie, PA.">
+  <meta property="og:image" content="{{ '/assets/images/logo.png' | url }}">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{{ page.url | url }}">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ title }} | Gliding Stars">
+  <meta name="twitter:description" content="Adaptive ice skating program in Erie, PA.">
+  <meta name="twitter:image" content="{{ '/assets/images/logo.png' | url }}">
 </head>
+
 <body class="{% if page.url == '/' %}home{% endif %}">
 
 <header class="site-header">
@@ -61,6 +76,12 @@
     updateNavState();
     window.addEventListener("scroll", updateNavState);
     window.addEventListener("resize", updateNavState);
+  }
+</script>
+
+<script>
+  if (location.pathname !== "/" && !location.pathname.endsWith(".html")) {
+    sessionStorage.setItem("redirect", location.pathname);
   }
 </script>
 
