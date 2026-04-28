@@ -465,6 +465,10 @@ p {
         background: #0d4f8b !important;
     }
 
+    .nav a:active,
+    .nav button:active {
+        opacity: 0.7;
+    }
     .nav {
         padding: 0.5rem 1rem;
         display: flex;
@@ -476,12 +480,15 @@ p {
     }
 
     .nav-logo {
-        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        height: 70px;
     }
 
     .nav-logo img {
         height: clamp(40px, 7.5vw, 56px);
         width: auto;
+        display: block;
     }
 
     .nav-right {
@@ -504,8 +511,8 @@ p {
         justify-content: center;
 
         width: 34px;
-        height: 70px;
-        padding: 4px;
+        height: 42px;
+        padding: 5px;
     }
 
     .nav-toggle {
