@@ -530,11 +530,52 @@ p {
         display: block;
     }
 
-    .hamburger-icon path {
-        stroke: white;
-        stroke-width: 2.5;
-        stroke-linecap: round;
-        fill: none;
+    /* container stays the same size */
+    .nav-toggle {
+        width: 70px;
+        height: 70px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        position: relative;
+    }
+
+    /* lines */
+    .nav-toggle span {
+        position: absolute;
+        width: 28px;
+        height: 2.5px;
+        background: white;
+        border-radius: 2px;
+        transition: all 0.3s ease;
+    }
+
+    /* position the 3 lines */
+    .nav-toggle span:nth-child(1) {
+        transform: translateY(-8px);
+    }
+
+    .nav-toggle span:nth-child(2) {
+        transform: translateY(0);
+    }
+
+    .nav-toggle span:nth-child(3) {
+        transform: translateY(8px);
+    }
+
+    /* ===== ACTIVE (X STATE) ===== */
+    .nav-toggle.active span:nth-child(1) {
+        transform: rotate(45deg);
+    }
+
+    .nav-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .nav-toggle.active span:nth-child(3) {
+        transform: rotate(-45deg);
     }
 
     .icon {
