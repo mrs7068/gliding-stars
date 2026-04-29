@@ -1,0 +1,61 @@
+{% extends "./base.njk" %}
+
+{% block content %}
+
+<!-- HERO -->
+<section class="hero">
+  <video autoplay muted loop playsinline class="hero-video">
+    <source src="{{ hero_video | url }}" type="video/mp4">
+  </video>
+
+  <div class="hero-overlay">
+    <img src="{{ hero_logo | url }}" alt="Gliding Stars logo" class="hero-logo">
+    <h1>{{ hero_motto }}</h1>
+    <p class="hero-sub">{{ hero_sub }}</p>
+  </div>
+</section>
+
+<!-- MISSION -->
+<section class="section mission">
+  <p>{{ mission }}</p>
+</section>
+
+<!-- QUICK LINKS -->
+<section class="section quick-links">
+  {% for card in quick_links %}
+    <div class="card">
+      <h3>{{ card.title }}</h3>
+      <p>{{ card.text }}</p>
+      <a href="{{ card.url | url }}" class="button">{{ card.button }}</a>
+    </div>
+  {% endfor %}
+</section>
+
+<!-- GALLERY -->
+<section class="section gallery-preview">
+  {% for image in gallery %}
+    <img src="{{ image.src | url }}" alt="{{ image.alt }}">
+  {% endfor %}
+</section>
+
+<!-- SHOW PREVIEW -->
+<section class="section show-preview">
+  <h2>{{ show.title }}</h2>
+  <p>{{ show.text }}</p>
+</section>
+
+<!-- COMMUNITY -->
+<section class="section community">
+  <h2>{{ community.title }}</h2>
+  <p>{{ community.text }}</p>
+</section>
+
+<!-- OPTIONAL FEATURE -->
+{% if feature_enabled %}
+<section class="section feature">
+  <h2>{{ feature.title }}</h2>
+  <p>{{ feature.text }}</p>
+</section>
+{% endif %}
+
+{% endblock %}

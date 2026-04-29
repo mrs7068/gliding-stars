@@ -31,7 +31,9 @@
 </header>
 
 <main>
-  {{ content | safe }}
+  {% block content %}
+    {{ content | safe }}
+  {% endblock %}
 </main>
 
 {% include "footer.njk" %}
