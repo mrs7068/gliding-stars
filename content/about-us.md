@@ -20,7 +20,7 @@ history: |
   >
   > So many children’s lives were being changed for the better and filled with such joy. A community was formed—kids bonding and growing physically, mentally, and socially with parents and guardians supporting and encouraging one another. But, most importantly, the kids were having fun! Lifelong friendships were being formed.
   >
-  > We simply HAD to start a similar therapeutic program in Erie...and we did! With help from Mercyhurst University and local business sponsorships (PNC Bank, Erie Insurance, and John V. Schultz Furniture Superstore), under the guidance of professional ice-skater Linda Althof and a few volunteers, we had our first skating session in September 1999 with 20 “Stars.” We became the Gliding Stars of Erie in 2004, but the program remained the same.
+  > We simply HAD to start a similar therapeutic program in Erie…and we did! With help from Mercyhurst University and local business sponsorships (PNC Bank, Erie Insurance, and John V. Schultz Furniture Superstore), under the guidance of professional ice-skater Linda Althof and a few volunteers, we had our first skating session in September 1999 with 20 “Stars.” We became the Gliding Stars of Erie in 2004, but the program remained the same.
   >
   > — Jack Schultz, Founder of Gliding Stars of Erie
 

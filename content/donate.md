@@ -27,11 +27,15 @@ why_text: |
 donate_title: Ways to Donate
 
 donate_text: |
+  Participating in our various fundraisers throughout the season is a great way to support us financially!
+
   Checks made out to **Gliding Stars of Erie, Inc.** can be sent to our PO box:
 
   Gliding Stars of Erie, Inc.  
   PO Box 11304  
   Erie, PA 16514
+  
+  Or, you can donate online:
 
 venmo_link: https://account.venmo.com/u/glidingstarsoferie
 venmo_text: Donate to Gliding Stars of Erie, Inc. on Venmo

@@ -635,14 +635,23 @@ p a:active,
 }
 
 @media (min-width: 768px) {
-    .donate-image-wrap {
-        float: right;
-        width: 26%;
-        margin: 0 0 1rem 1.5rem;
+    .donate-layout {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
     }
 
     .donate-text {
-        overflow: visible;
+        flex: 1;
+        order: 1;
+    }
+
+    .donate-image-wrap {
+        width: 26%;
+        max-width: 300px;
+        margin: 0;
+        flex-shrink: 0;
+        order: 2;
     }
 }
 
