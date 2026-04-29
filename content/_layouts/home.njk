@@ -24,17 +24,14 @@
 <section class="section quick-links">
   {% for card in quick_links %}
     <div class="card">
-      <h3>{{ card.title }}</h3>
+
+      <img src="{{ card.image | url }}" alt="{{ card.title }}" class="card-image">
+
+      <h2 class="card-title">{{ card.title }}</h2>
       <p>{{ card.text }}</p>
       <a href="{{ card.url | url }}" class="button">{{ card.button }}</a>
-    </div>
-  {% endfor %}
-</section>
 
-<!-- GALLERY -->
-<section class="section gallery-preview">
-  {% for image in gallery %}
-    <img src="{{ image.src | url }}" alt="{{ image.alt }}">
+    </div>
   {% endfor %}
 </section>
 
@@ -42,12 +39,14 @@
 <section class="section show-preview">
   <h2>{{ show.title }}</h2>
   <p>{{ show.text }}</p>
-</section>
-
-<!-- COMMUNITY -->
-<section class="section community">
-  <h2>{{ community.title }}</h2>
-  <p>{{ community.text }}</p>
+  <div class="video-embed">
+    <iframe
+      src="https://www.youtube.com/embed/0qNn9nf9P-4"
+      title="Gliding Stars Ice Show"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen>
+    </iframe>
+  </div>
 </section>
 
 <!-- OPTIONAL FEATURE -->

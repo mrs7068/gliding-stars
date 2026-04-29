@@ -26,34 +26,23 @@ mission: Gliding Stars of Erie is an adaptive ice skating program that helps ind
 # =========================
 
 quick_links:
-  - title: About the Program
-    text: Learn how Gliding Stars works and what makes it meaningful for skaters and families.
+  - title: About Us
+    text: Learn the history behind Gliding Stars of Erie organization and who we are today.
     url: /about-us/
     button: Learn More
+    image: /assets/images/sample1.jpg
 
-  - title: Season & Schedule
-    text: See how the season is structured and find current schedules and updates.
+  - title: Our Program
+    text: See how the season is structured and find current schedules, updates, and a photo gallery of our Stars.
     url: /our-program/
     button: View Schedule
+    image: /assets/images/sample2.jpg
 
   - title: Get Involved
-    text: Join as a skater, volunteer, or supporter and become part of the community.
+    text: Join as a skater, volunteer, or supporter and become part of the Gliding Stars family.
     url: /get-involved/
     button: Contact Us
-
-# =========================
-# GALLERY
-# =========================
-
-gallery:
-  - src: /assets/images/sample1.jpg
-    alt: Gliding Stars skaters
-
-  - src: /assets/images/sample2.jpg
-    alt: Gliding Stars program
-
-  - src: /assets/images/sample3.jpg
-    alt: Gliding Stars performance
+    image: /assets/images/sample3.jpg
 
 # =========================
 # SECTIONS
@@ -61,11 +50,10 @@ gallery:
 
 show:
   title: The Ice Show
-  text: Each season builds toward a final performance where every skater has the opportunity to shine. It’s a moment of confidence, pride, and celebration for skaters and families alike.
+  text: |
+    Each season builds toward a final performance where every skater has the opportunity to shine. It’s a moment of confidence, pride, and celebration for skaters and families alike.
 
-community:
-  title: A Community on and off the Ice
-  text: Gliding Stars is more than a skating program—it’s a place where friendships form, families connect, and everyone feels part of something bigger.
+    View our 2025 Show recording below for a taste of what it’s like to see our Stars shine!
 
 # =========================
 # OPTIONAL
@@ -75,5 +63,5 @@ feature_enabled: false
 
 feature:
   title: Summer Program
-  text: Details about the off-season program go here.
+  text: Details about.njk the off-season program go here.
 ---

@@ -1,0 +1,48 @@
+{% extends "./base.njk" %}
+
+{% block content %}
+
+<section class="page-hero">
+  <img src="{{ hero_image | url }}" alt="About Gliding Stars">
+  <div class="page-hero-overlay">
+    <h1>{{ hero_title }}</h1>
+  </div>
+</section>
+
+<section class="section">
+  <h2>{{ history_title }}</h2>
+
+  <div class="history-layout">
+
+    <figure class="history-image-wrap">
+      <img src="{{ history_image | url }}" alt="Jack Schultz and Linda Althof" class="history-image">
+      <figcaption>
+        <em>Left: Founder Jack Schultz, Right: Director Linda Althof</em>
+      </figcaption>
+    </figure>
+
+    <div class="history-text">
+      {{ history | markdown | safe }}
+    </div>
+
+  </div>
+</section>
+
+<section class="section">
+  <h2>{{ how_title }}</h2>
+  {{ how_text | markdown | safe }}
+</section>
+
+<section class="section">
+  <div class="info-box">
+    <h2>{{ what_title }}</h2>
+
+    <ul>
+      {% for item in what_list %}
+        <li>{{ item | markdown | safe }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+
+{% endblock %}
