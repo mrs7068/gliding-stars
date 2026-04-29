@@ -3,7 +3,7 @@ title: Donate
 layout: donate.njk
 
 # HERO
-hero_title: Donate to Gliding Stars of Erie, Inc.
+hero_title: Donate
 hero_image: /assets/images/donate-hero.jpg
 
 # =========================

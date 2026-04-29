@@ -1,0 +1,52 @@
+{% extends "./base.njk" %}
+
+{% block content %}
+
+<!-- HERO -->
+<section class="page-hero">
+  <img src="{{ hero_image | url }}" alt="Get involved with Gliding Stars">
+  <div class="page-hero-overlay">
+    <h1>{{ hero_title }}</h1>
+  </div>
+</section>
+
+<section class="section get-involved-grid">
+
+  <!-- VOLUNTEERS -->
+  <div class="get-col">
+
+    <h2>{{ volunteer_title }}</h2>
+    <h3 class="subheading">{{ volunteer_subtitle }}</h3>
+
+    <div class="volunteer-text">
+      {{ volunteer_text | markdown | safe }}
+    </div>
+
+    <a href="{{ volunteer_form | url }}" target="_blank" class="button">
+      Volunteer Registration Form!
+    </a>
+
+  </div>
+
+  <!-- SKATERS -->
+  <div class="get-col">
+
+    <div class="info-box">
+
+      <h2>{{ skater_title }}</h2>
+
+      <div class="skater-text">
+        {{ skater_text | markdown | safe }}
+      </div>
+
+      <a href="{{ skater_form | url }}" target="_blank" class="button">
+        Skater Registration Form!
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+{% endblock %}

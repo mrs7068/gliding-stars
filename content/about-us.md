@@ -3,7 +3,7 @@ title: About Us
 layout: about.njk
 
 # HERO
-hero_title: About Gliding Stars of Erie, Inc.
+hero_title: About Us
 hero_image: /assets/images/about-hero.jpg
 
 # =========================

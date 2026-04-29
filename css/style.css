@@ -76,6 +76,7 @@ p {
 p a,
 .history-text a,
 .section a:not(.button),
+.info-box a:not(.button),
 .info-box a {
     color: #0d4f8b;
     text-decoration: none;
@@ -496,7 +497,7 @@ p a:active,
     padding: 0.6rem 1.2rem;
 
     background: #0d4f8b;
-    color: white;
+    color: white !important;
     text-decoration: none;
 
     border-radius: 6px;
@@ -667,6 +668,53 @@ p a:active,
 
     .donate-text {
         order: 1;
+    }
+}
+
+/* =========================
+   GET INVOLVED PAGE
+========================= */
+
+/* subtle H3 styling (less prominent than H2) */
+.subheading {
+    font-size: 1.1rem;
+    font-weight: 600;
+    font-style: italic;
+    color: #444;
+    margin-top: 0.25rem;
+    margin-bottom: 1rem;
+}
+
+/* spacing polish */
+.volunteer-text,
+.skater-text {
+    max-width: none;
+}
+
+/* =========================
+   GET INVOLVED GRID
+========================= */
+
+.get-involved-grid {
+    display: block;
+}
+
+/* columns */
+.get-col {
+    padding-bottom: 2rem;
+}
+
+/* desktop layout */
+@media (min-width: 768px) {
+    .get-involved-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2.5rem;
+        align-items: start;
+    }
+
+    .get-col {
+        margin-bottom: 0;
     }
 }
 
