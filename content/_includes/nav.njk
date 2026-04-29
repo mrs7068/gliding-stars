@@ -8,7 +8,7 @@
     {% for item in navigation %}
       <li>
         <a href="{{ item.url | url }}" class="{% if page.url == item.url %}active{% endif %}">
-          {{ item.name }}
+          <span>{{ item.name }}</span>
         </a>
       </li>
     {% endfor %}
