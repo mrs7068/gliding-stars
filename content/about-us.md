@@ -10,7 +10,7 @@ hero_image: /assets/images/about-hero.jpg
 # HISTORY
 # =========================
 
-history_title: History
+history_title: Our History
 history_image: /assets/images/jack-linda.jpg
 
 history: |

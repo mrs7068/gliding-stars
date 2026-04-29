@@ -1,0 +1,51 @@
+{% extends "./base.njk" %}
+
+{% block content %}
+
+<!-- HERO -->
+<section class="page-hero">
+  <img src="{{ hero_image | url }}" alt="Donate to Gliding Stars">
+  <div class="page-hero-overlay">
+    <h1>{{ hero_title }}</h1>
+  </div>
+</section>
+
+<!-- WHY DONATE -->
+<section class="section donate-layout">
+
+  <figure class="donate-image-wrap">
+    <img src="{{ why_image | url }}" alt="Gliding Stars program" class="donate-image">
+  </figure>
+
+  <div class="donate-text">
+    <h2>{{ why_title }}</h2>
+    {{ why_text | markdown | safe }}
+  </div>
+
+</section>
+
+<!-- WAYS TO DONATE -->
+<section class="section donate-center">
+
+  <div class="info-box donate-box">
+
+    <h2>{{ donate_title }}</h2>
+
+    <div class="donate-mail">
+      {{ donate_text | markdown | safe }}
+    </div>
+
+<!-- VENMO -->
+
+    <a href="{{ venmo_link }}" target="_blank" rel="noopener noreferrer" class="venmo-button">
+      <svg viewBox="0 0 32 32" class="venmo-icon">
+        <path d="M26.6 7.3c.3 5.5-2.3 12.6-7.6 19.7h-7.4L5.4 7.3l6.1-.5 3.3 13.1c3.1-5 4.7-8.5 4.4-12.3l7.4-.3z"/>
+      </svg>
+      <span>{{ venmo_text }}</span>
+    </a>
+
+  </div>
+
+</section>
+
+{% endblock %}

@@ -545,20 +545,120 @@ p a:active,
     margin-top: 0;
 }
 
-
 /* =========================
-   GALLERY
+   DONATE PAGE
 ========================= */
-.gallery-preview {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 5px;
+
+/* layout */
+.donate-layout {
+    display: block;
 }
 
-.gallery-preview img {
+/* image */
+.donate-image-wrap {
+    margin: 1.5rem 0;
+}
+
+.donate-image {
     width: 100%;
-    height: 120px;
     object-fit: cover;
+    border-radius: 10px;
+}
+
+/* =========================
+   CENTERED DONATE BOX
+========================= */
+
+.donate-center {
+    display: flex;
+    justify-content: center;
+}
+
+.donate-text {
+    display: block;
+}
+
+.donate-box {
+    width: 100%;
+    max-width: 650px; /* tighter but still roomy */
+}
+
+.donate-layout::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* VENMO BUTTON (FEATURED) */
+.venmo-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+
+    padding: 0.9rem 1.2rem;
+
+    background: #008cff;
+    color: white !important;
+    text-decoration: none;
+
+    border-radius: 8px;
+    font-weight: 600;
+
+    transition: transform 0.15s ease,
+    box-shadow 0.15s ease,
+    background 0.2s ease;
+}
+
+.venmo-icon {
+    height: 1.4em;
+    width: auto;
+    flex-shrink: 0;
+    fill: white;
+}
+
+
+
+/* hover */
+@media (hover: hover) {
+    .venmo-button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 18px rgba(0,0,0,0.18);
+        background: #0074d4;
+    }
+}
+
+/* click */
+.venmo-button:active {
+    transform: translateY(0);
+    box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+}
+
+@media (min-width: 768px) {
+    .donate-image-wrap {
+        float: right;
+        width: 26%;
+        margin: 0 0 1rem 1.5rem;
+    }
+
+    .donate-text {
+        overflow: visible;
+    }
+}
+
+@media (max-width: 767px) {
+    .donate-layout {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .donate-image-wrap {
+        order: 2;
+    }
+
+    .donate-text {
+        order: 1;
+    }
 }
 
 
