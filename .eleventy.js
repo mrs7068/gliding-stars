@@ -12,13 +12,17 @@ module.exports = function(eleventyConfig) {
         }
     });
 
-    // Markdown filter (used in your layouts)
+    // Markdown filter
     eleventyConfig.addFilter("markdown", (content) => {
         return md.render(content || "");
     });
 
     eleventyConfig.addPassthroughCopy("css");
     eleventyConfig.addPassthroughCopy("assets");
+    eleventyConfig.addPassthroughCopy("js");
+
+    // ✅ ADD THIS
+    eleventyConfig.addGlobalData("build", Date.now());
 
     return {
         pathPrefix: "/gliding-stars/",

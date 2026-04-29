@@ -9,7 +9,7 @@
       
     </title>
 
-  <link rel="stylesheet" href="/gliding-stars/css/style.css">
+  <link rel="stylesheet" href="/gliding-stars/css/style.css?v=1777480748253">
   <link rel="icon" href="/gliding-stars/assets/images/favicon.svg" type="image/svg+xml">
   <link rel="alternate icon" href="/gliding-stars/assets/images/favicon.svg">
   <link rel="apple-touch-icon" href="/gliding-stars/assets/images/favicon.svg">
@@ -277,55 +277,7 @@ View our 2025 Show recording below for a taste of what it’s like to see our St
 
 </footer>
 
-<script>
-  const toggle = document.querySelector(".nav-toggle");
-  const links = document.querySelector(".nav-links");
-
-  if (toggle && links) {
-    toggle.addEventListener("click", () => {
-      links.classList.toggle("active");
-      toggle.classList.toggle("active");
-    });
-  }
-
-  const body = document.body;
-  const hero = document.querySelector(".hero");
-
-  if (hero) {
-    const updateNavState = () => {
-      const heroHeight = hero.offsetHeight;
-      const isMobile = window.innerWidth <= 767;
-
-      const logoTrigger = isMobile
-        ? heroHeight * 0.5
-        : heroHeight * 0.68;
-
-      const bgTrigger = heroHeight - 80;
-
-      if (window.scrollY > logoTrigger) {
-        body.classList.add("scrolled");
-      } else {
-        body.classList.remove("scrolled");
-      }
-
-      if (window.scrollY > bgTrigger) {
-        body.classList.add("nav-solid");
-      } else {
-        body.classList.remove("nav-solid");
-      }
-    };
-
-    updateNavState();
-    window.addEventListener("scroll", updateNavState);
-    window.addEventListener("resize", updateNavState);
-  }
-</script>
-
-<script>
-  if (location.pathname !== "/" && !location.pathname.endsWith(".html")) {
-    sessionStorage.setItem("redirect", location.pathname);
-  }
-</script>
+<script src="/gliding-stars/js/main.js?v=1777480748253" defer></script>
 
 </body>
 </html>
