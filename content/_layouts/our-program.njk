@@ -1,0 +1,142 @@
+{% extends "./base.njk" %}
+
+{% block content %}
+
+<!-- HERO -->
+<section class="page-hero">
+  <img src="{{ hero_image | url }}" alt="Our program">
+  <div class="page-hero-overlay">
+    <h1>{{ hero_title }}</h1>
+  </div>
+</section>
+
+<!-- IMPORTANT UPDATE -->
+{% if update_enabled %}
+<section class="section">
+  <div class="update-box">
+    <h2>{{ update_title }}</h2>
+    <p>{{ update_text | markdown | safe }}</p>
+  </div>
+</section>
+{% endif %}
+
+<!-- SCHEDULE -->
+<section class="section">
+  <h2>{{ season }} Schedule</h2>
+
+  <p class="schedule-time featured-time">
+    {{ monday_label }}: {{ default_time }}
+  </p>
+
+  <div class="schedule-grid">
+
+    <!-- MONTHLY MONDAY SESSIONS -->
+    {% for month, dates in schedule %}
+      <div class="schedule-card">
+        <h3>{{ month }}</h3>
+        <p>
+          {% for d in dates %}
+            {{ month }} {{ d }}{% if not loop.last %}, {% endif %}
+          {% endfor %}
+        </p>
+      </div>
+    {% endfor %}
+
+  </div>
+
+  <!-- ADDITIONAL SESSIONS -->
+    <div class="schedule-extras">
+      <h3>Additional Sessions (Show Preparation)</h3>
+
+      <div class="schedule-card schedule-card-accent">
+        <h3>March</h3>
+        <ul>
+          {% for item in extra_sessions %}
+            <li>{{ item.date }} — {{ item.time }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+
+  <!-- SKATING EVENTS -->
+  <div class="schedule-events">
+    <h3>Skating Events</h3>
+
+    <div class="event-grid">
+      {% for e in skating_events %}
+        <div class="event-card {% if e.highlight %}event-card-featured{% endif %}">
+
+          <div class="event-title">{{ e.title }}</div>
+
+          <div class="event-line">
+            <strong>Date:</strong> {{ e.date }}
+          </div>
+
+          <div class="event-line">
+            <strong>Time:</strong> {{ e.time }}
+          </div>
+
+          <div class="event-line">
+            <strong>Location:</strong>
+            <a href="{{ e.location_url }}" target="_blank">
+              {{ e.location_name }}
+            </a>
+          </div>
+
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+
+  <!-- FUNDRAISERS -->
+  <div class="schedule-events">
+    <h3>Fundraisers</h3>
+    <ul>
+      {% for f in fundraisers %}
+        <li>{{ f }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+
+  <a href="{{ schedule_download | url }}" class="button" target="_blank">
+    Download Full Schedule
+  </a>
+</section>
+
+<!-- GALLERY -->
+<section class="section">
+  <h2>Photo Gallery</h2>
+
+  <div class="gallery-carousel">
+
+    <button class="gallery-btn prev" aria-label="Previous">&#10094;</button>
+
+    <div class="gallery-track">
+      {% for photo in gallery %}
+        <figure class="gallery-item">
+          <img
+            src="{{ photo.image | url }}"
+            alt="{{ photo.caption }}"
+            data-full="{{ photo.image | url }}"
+          >
+          <figcaption>
+            <strong>{{ photo.caption }}</strong><br>
+            <span>{{ photo.credit }}</span>
+          </figcaption>
+        </figure>
+      {% endfor %}
+    </div>
+
+    <button class="gallery-btn next" aria-label="Next">&#10095;</button>
+
+  </div>
+</section>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+  <span class="lightbox-close">&times;</span>
+  <img class="lightbox-img" src="" alt="">
+  <p class="lightbox-caption"></p>
+</div>
+
+{% endblock %}

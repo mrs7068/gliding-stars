@@ -29,7 +29,7 @@ donate_title: Ways to Donate
 donate_text: |
   Participating in our various fundraisers throughout the season is a great way to support us financially!
 
-  Checks made out to **Gliding Stars of Erie, Inc.** can be sent to our PO box:
+  Checks made out to **Gliding Stars of Erie** can be sent to our PO box:
 
   Gliding Stars of Erie, Inc.  
   PO Box 11304  

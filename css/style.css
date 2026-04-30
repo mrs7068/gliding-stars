@@ -1139,3 +1139,324 @@ p a:active,
         font-size: 0.75rem;
     }
 }
+
+/* =========================
+   UPDATE BOX
+========================= */
+.update-box {
+    background: #0d4f8b;
+    color: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.update-box h2 {
+    display: inline-block; /* shrink to text width */
+}
+
+.update-box h2::after {
+    width: 100%;           /* match text width */
+    background: white;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* =========================
+   SCHEDULE
+========================= */
+.schedule-time {
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.schedule-grid {
+    display: grid;
+    gap: 1rem;
+}
+
+.schedule-card {
+    background: #f4f4f4;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.schedule-card h3 {
+    margin-bottom: 0.4rem;
+}
+
+/* exceptions + events */
+.schedule-exceptions,
+.schedule-events {
+    margin-top: 1.5rem;
+}
+
+.schedule-exceptions ul,
+.schedule-events ul {
+    padding-left: 1.2rem;
+}
+
+/* desktop */
+@media (min-width: 768px) {
+    .schedule-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.featured-time {
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-align: left;
+    margin-bottom: 1.5rem;
+}
+
+.highlight {
+    background: #0d4f8b;
+    color: white;
+    padding: 0.15rem 0.3rem;
+    border-radius: 4px;
+}
+
+.schedule-extras {
+    margin-top: 2rem;
+}
+
+.schedule-extras h3 {
+    text-align: left;
+    margin-bottom: 1rem;
+}
+
+.schedule-card-accent {
+    border-top: 4px solid #0d4f8b;
+    background: #f7f9fc;
+
+    display: inline-block;   /* 🔑 THIS is what stops full width */
+    max-width: 100%;
+}
+
+/* =========================
+   EVENT CARDS
+========================= */
+
+.event-grid {
+    display: grid;
+    gap: 1rem;
+}
+
+@media (min-width: 768px) {
+    .event-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.event-card {
+    background: #f4f4f4;
+    padding: 0.9rem 1.1rem;
+    border-radius: 8px;   /* ✅ matches your system */
+    border-top: 4px solid #0d4f8b;
+
+}
+
+/* make lines stack cleanly */
+.event-card div {
+    display: block;
+}
+
+/* title emphasis */
+.event-title {
+    font-weight: 700;
+    margin-bottom: 0.2rem;
+}
+
+/* spacing between lines */
+.event-line {
+    font-size: 0.9rem;
+}
+
+/* links */
+.event-card a {
+    color: #0d4f8b;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+/* FEATURED (Show Day) */
+.event-card-featured {
+    background: #0d4f8b;
+    color: white;
+    border-top: 4px solid rgba(255,255,255,0.7) !important;
+}
+
+.event-card-featured a {
+    color: #e6f2ff !important;   /* slightly off-white (clickable look) */
+    text-decoration: none;
+
+    /* restore underline system */
+    background-image: linear-gradient(currentColor, currentColor);
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    background-position: 0 100%;
+
+    transition: background-size 0.25s ease, color 0.2s ease, opacity 0.2s ease;
+}
+
+@media (hover: hover) {
+    .event-card-featured a:hover {
+        color: #ffffff !important;
+        background-size: 100% 2px; /* ← THIS is the animated underline */
+    }
+}
+
+.event-card-featured a:active {
+    opacity: 0.7;
+}
+
+.event-card-featured a {
+    position: relative;
+}
+
+.event-card-featured a:active {
+    top: 1px;
+}
+
+/* =========================
+   GALLERY
+========================= */
+.gallery-grid {
+    display: grid;
+    gap: 1rem;
+}
+
+.gallery-item img {
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+}
+
+.gallery-item figcaption {
+    font-size: 0.85rem;
+    margin-top: 0.4rem;
+    color: #555;
+}
+
+/* desktop */
+@media (min-width: 768px) {
+    .gallery-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* =========================
+   GALLERY CAROUSEL
+========================= */
+.gallery-carousel {
+    position: relative;
+    overflow: hidden;
+}
+
+.gallery-track {
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 0.5rem;
+    scroll-behavior: smooth;
+}
+
+.gallery-item {
+    min-width: 80%;
+    scroll-snap-align: center;
+    flex-shrink: 0;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.gallery-item figcaption {
+    font-size: 0.85rem;
+    margin-top: 0.4rem;
+    color: #555;
+}
+
+/* desktop shows multiple */
+@media (min-width: 768px) {
+    .gallery-item {
+        min-width: 30%;
+    }
+}
+
+/* buttons */
+.gallery-btn {
+    position: absolute;
+    top: 40%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    font-size: 2rem;
+    padding: 0.3rem 0.6rem;
+    cursor: pointer;
+    border-radius: 6px;
+    z-index: 2;
+}
+
+.gallery-btn.prev { left: 5px; }
+.gallery-btn.next { right: 5px; }
+
+/* =========================
+   LIGHTBOX
+========================= */
+.lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.9);
+    z-index: 2000;
+
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    padding: 1rem;
+}
+
+.lightbox.active {
+    display: flex;
+}
+
+.lightbox-img {
+    max-width: 95%;
+    max-height: 75vh;
+    border-radius: 10px;
+}
+
+.lightbox-caption {
+    color: white;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+}
+
+/* =========================
+   HIDE GALLERY SCROLLBAR
+========================= */
+.gallery-track {
+    -ms-overflow-style: none;  /* IE + Edge */
+    scrollbar-width: none;     /* Firefox */
+}
+
+.gallery-track::-webkit-scrollbar {
+    display: none;             /* Chrome, Safari */
+}

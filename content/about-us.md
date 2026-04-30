@@ -14,7 +14,7 @@ history_title: Our History
 history_image: /assets/images/jack-linda.jpg
 
 history: |
-  **In the fall of 1999**, Gliding Stars came to [Mercyhurst University](https://www.mercyhurst.edu/). Our founder Jack Schultz had viewed the Gliding Stars program on the _Real Sports with Bryant Gumbel_.
+  **In the fall of 1999**, Gliding Stars came to [Mercyhurst University](https://www.mercyhurst.edu/). Our founder Jack Schultz had seen the Gliding Stars program on _Real Sports with Bryant Gumbel_, and it inspired him to bring the program to Erie, Pennsylvania.
 
   > During the spring of 1999, I happened to be in the right place at the right time to be exposed to a very successful therapeutic ice skating program called SABAH (Skating Association of the Blind and Handicapped) in Buffalo, NY, getting a close-up introduction to the format and curriculum.
   >

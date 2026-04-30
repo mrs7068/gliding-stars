@@ -35,9 +35,9 @@ skater_title: Skater Program
 skater_text: |
   We are always looking for individuals to join the Gliding Stars of Erie family and skate with us. You or your loved one can become a skater in just a few easy steps.
 
-  Complete the skater registration form and submit it along with either a $50 non-refundable deposit or the full $150 season fee. Checks should be made out to **Gliding Stars of Erie, Inc.** and mailed to our PO box, or you may bring your form and payment to the rink on your first week of skating.
+  Complete the skater registration form and submit it along with either a $50 non-refundable deposit or the full $150 season fee. Checks should be made out to **Gliding Stars of Erie** and mailed to our PO box, or you may bring your form and payment to the rink on your first week of skating.
 
-  During the first session, skaters will be fitted for equipment and will not skate. Volunteers will attend orientation followed by a volunteer-only skate. Regular skating sessions begin the following week.
+  During the first session in mid-September, skaters will be fitted for equipment and will not skate while volunteers will attend orientation followed by a volunteer-only skate. Regular skating sessions begin the following week.
 
   Due to preparation for the annual ice show, registration for new skaters closes on January 1. However, new volunteers are always welcome throughout the season.
 
